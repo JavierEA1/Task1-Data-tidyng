@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .letraAZUL{color:rgb(0, 17, 255)}
+    #result{border: solid 1pt; border-color:blue}
+</style>
+<head >
+    <title >Task1</title>
+</head>
+<script>
+function calculo(){
+    op=document.getElementById('operation').value
+    x=parseInt(document.getElementById('first number').value)
+    y=parseInt(document.getElementById('second number').value)
+    switch(op)
+{
+    case "0":
+          document.getElementById("results").innerHTML = "Please Select Arithmetic Operator";
+        ;
+    case "sum":
+    document.getElementById('results').innerHTML= x + y;
+        break;
+    case "rest":
+    document.getElementById('results').innerHTML= x - y;
+        break;
+    case "multiplication":
+    document.getElementById('results').innerHTML=  x * y;
+        break;
+    case "division":
+    document.getElementById('results').innerHTML= x / y;
+        break;
+    
+}
+            
+
+
+}
+    
+</script>
+<body>
+    <H1>Task1</H1>
+
+    <p>You must introduce the operation and the numbers </p>
+<div class="letraAZUL">
+    
+    <label for="operation"> Select operation</label>
+    <select class="operation" id="operation">
+    <option value="0" selected disabled>Operation</option>
+    <option value="sum">sum</option>
+    <option value="rest">rest</option>
+    <option value="multiplication">multiplication</option>
+    <option value="division">division</option>
+
+
+
+
+
+
+    </select>
+
+</div>
+<p></p>
+
+<div>
+    <label for="first number">Introduce the first number:</label>    
+   <input id="first number" placeholder="First number">
+    <p></p>
+    <label for="second number">Introduce the second number:</label>    
+    <input id="second number" placeholder="Second number">
+
+
+
+
+</div>
+
+
+<div>
+    <button type="submit" onclick="calculo()">submit</button>
+</div>
+
+<div id="results">
+    Results:
+</div>
+
+
+
+</body>
+</html>
